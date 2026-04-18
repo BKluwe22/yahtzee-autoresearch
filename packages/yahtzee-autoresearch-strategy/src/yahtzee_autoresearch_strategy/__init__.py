@@ -1,2 +1,4 @@
-def main() -> None:
-    print("Hello from yahtzee-autoresearch-strategy!")
+from .strategy import act
+
+
+__all__ = ["act"]

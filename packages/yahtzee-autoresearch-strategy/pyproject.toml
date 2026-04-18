@@ -1,16 +1,18 @@
 [project]
 name = "yahtzee-autoresearch-strategy"
 version = "0.1.0"
-description = "Add your description here"
+description = "Yahtzee strategy — the `act` function the agent iterates on."
 readme = "README.md"
 authors = [
     { name = "Bjorn Kluwe", email = "bjoern.kluwe@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "yahtzee-autoresearch-common",
+]
 
-[project.scripts]
-yahtzee-autoresearch-strategy = "yahtzee_autoresearch_strategy:main"
+[tool.uv.sources]
+yahtzee-autoresearch-common = { workspace = true }
 
 [build-system]
 requires = ["hatchling"]

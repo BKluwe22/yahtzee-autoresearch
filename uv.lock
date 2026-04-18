@@ -6,7 +6,7 @@ requires-python = ">=3.13"
 members = [
     "yahtzee-autoresearch-agents",
     "yahtzee-autoresearch-common",
-    "yahtzee-autoresearch-env",
+    "yahtzee-autoresearch-evaluation",
     "yahtzee-autoresearch-strategy",
 ]
 
@@ -85,11 +85,23 @@ version = "0.1.0"
 source = { editable = "packages/yahtzee-autoresearch-common" }
 
 [[package]]
-name = "yahtzee-autoresearch-env"
+name = "yahtzee-autoresearch-evaluation"
 version = "0.1.0"
 source = { editable = "packages/yahtzee-autoresearch-evaluation" }
+dependencies = [
+    { name = "yahtzee-autoresearch-common" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "yahtzee-autoresearch-common", editable = "packages/yahtzee-autoresearch-common" }]
 
 [[package]]
 name = "yahtzee-autoresearch-strategy"
 version = "0.1.0"
 source = { editable = "packages/yahtzee-autoresearch-strategy" }
+dependencies = [
+    { name = "yahtzee-autoresearch-common" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "yahtzee-autoresearch-common", editable = "packages/yahtzee-autoresearch-common" }]

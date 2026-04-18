@@ -1,16 +1,18 @@
 [project]
-name = "yahtzee-autoresearch-env"
+name = "yahtzee-autoresearch-evaluation"
 version = "0.1.0"
-description = "Add your description here"
+description = "Yahtzee simulation + scoring evaluator."
 readme = "README.md"
 authors = [
     { name = "Bjorn Kluwe", email = "bjoern.kluwe@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "yahtzee-autoresearch-common",
+]
 
-[project.scripts]
-yahtzee-autoresearch-env = "yahtzee_autoresearch_env:main"
+[tool.uv.sources]
+yahtzee-autoresearch-common = { workspace = true }
 
 [build-system]
 requires = ["hatchling"]
