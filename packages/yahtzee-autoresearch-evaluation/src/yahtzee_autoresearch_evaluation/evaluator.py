@@ -109,5 +109,3 @@ def simulate(
             scores.extend(chunk_scores)
     return scores
 
-
-__all__ = ["StrategyRef", "simulate"]

@@ -1,4 +1,4 @@
-from .dice import (
+from yahtzee_autoresearch_common.dice import (
     FaceCounts,
     count_faces,
     enumerate_sorted_dice,
@@ -6,7 +6,7 @@ from .dice import (
     roll_dice,
     sort_dice,
 )
-from .models import (
+from yahtzee_autoresearch_common.models import (
     Action,
     BONUS_YAHTZEE_SCORE,
     Category,
@@ -30,7 +30,7 @@ from .models import (
     UPPER_CATEGORIES,
     YAHTZEE_SCORE,
 )
-from .scoring import (
+from yahtzee_autoresearch_common.scoring import (
     CategoryScores,
     all_base_scores,
     apply_score,

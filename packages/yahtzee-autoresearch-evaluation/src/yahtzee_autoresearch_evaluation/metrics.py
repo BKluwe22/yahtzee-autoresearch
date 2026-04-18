@@ -89,5 +89,3 @@ def summarize(scores: Sequence[int]) -> ScoreSummary:
         range=sorted_scores[-1] - sorted_scores[0],
     )
 
-
-__all__ = ["ScoreSummary", "median", "summarize"]

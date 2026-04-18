@@ -46,5 +46,3 @@ def play_game(act: ActFn, rng: random.Random) -> int:
             dice = reroll(dice, action.reroll_mask, rng)  # type: ignore[union-attr]
     return sc.total
 
-
-__all__ = ["ActFn", "play_game"]

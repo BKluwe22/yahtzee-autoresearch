@@ -54,12 +54,3 @@ def enumerate_sorted_dice() -> Iterable[Dice]:
     """Yield every distinct sorted dice combination (252 of them)."""
     return combinations_with_replacement(range(1, 7), DICE_PER_ROLL)  # type: ignore[return-value]
 
-
-__all__ = [
-    "FaceCounts",
-    "sort_dice",
-    "count_faces",
-    "roll_dice",
-    "reroll",
-    "enumerate_sorted_dice",
-]

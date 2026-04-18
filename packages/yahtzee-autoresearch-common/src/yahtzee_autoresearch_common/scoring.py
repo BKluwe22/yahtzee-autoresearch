@@ -123,14 +123,3 @@ def apply_score(scorecard: Scorecard, dice: Dice, category: Category) -> Scoreca
     if scorecard.is_filled(category):
         raise ValueError(f"Category {category.name} already filled")
     return scorecard.with_score(category, score_for(scorecard, dice, category))
-
-
-__all__ = [
-    "CategoryScores",
-    "is_yahtzee",
-    "base_score",
-    "all_base_scores",
-    "score_for",
-    "legal_categories",
-    "apply_score",
-]
