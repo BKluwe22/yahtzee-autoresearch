@@ -9,9 +9,6 @@ authors = [
 requires-python = ">=3.13"
 dependencies = []
 
-[project.scripts]
-yahtzee-autoresearch-common = "yahtzee_autoresearch_common:main"
-
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"

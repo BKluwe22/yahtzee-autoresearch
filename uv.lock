@@ -5,7 +5,9 @@ requires-python = ">=3.13"
 [manifest]
 members = [
     "yahtzee-autoresearch-agents",
+    "yahtzee-autoresearch-common",
     "yahtzee-autoresearch-env",
+    "yahtzee-autoresearch-strategy",
 ]
 
 [manifest.dependency-groups]
@@ -78,6 +80,16 @@ version = "0.1.0"
 source = { editable = "packages/yahtzee-autoresearch-agents" }
 
 [[package]]
+name = "yahtzee-autoresearch-common"
+version = "0.1.0"
+source = { editable = "packages/yahtzee-autoresearch-common" }
+
+[[package]]
 name = "yahtzee-autoresearch-env"
 version = "0.1.0"
-source = { editable = "packages/yahtzee-autoresearch-env" }
+source = { editable = "packages/yahtzee-autoresearch-evaluation" }
+
+[[package]]
+name = "yahtzee-autoresearch-strategy"
+version = "0.1.0"
+source = { editable = "packages/yahtzee-autoresearch-strategy" }
