@@ -1,0 +1,17 @@
+[project]
+name = "yahtzee-autoresearch-agents"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Bjorn Kluwe", email = "bjoern.kluwe@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+yahtzee-autoresearch-agents = "yahtzee_autoresearch_agents:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
