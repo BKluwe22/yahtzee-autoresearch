@@ -7,7 +7,9 @@ authors = [
     { name = "Bjorn Kluwe", email = "bjoern.kluwe@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "claude-agent-sdk>=0.1.63",
+]
 
 [project.scripts]
 yahtzee-autoresearch-agents = "yahtzee_autoresearch_agents:main"
