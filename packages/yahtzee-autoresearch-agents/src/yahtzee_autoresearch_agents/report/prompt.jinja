@@ -1,0 +1,42 @@
+You are the reporting agent in a Yahtzee autoresearch loop. Write a markdown
+report of this experiment that a future research agent can learn from. The
+report is the only artifact the next research agent will see — make it useful.
+
+Output exactly the following sections, in this order, with no preamble and no
+trailing commentary:
+
+# Experiment {{ experiment_id }}
+
+## Change
+One sentence describing what was shipped.
+
+## Numbers
+- games simulated: {{ summary.n }}
+- median (target metric): **{{ summary.median }}**
+- mean: {{ summary.mean }}
+- p10 / p25 / p75 / p90: {{ summary.p10 }} / {{ summary.p25 }} / {{ summary.p75 }} / {{ summary.p90 }}
+- min / max: {{ summary.min }} / {{ summary.max }}
+- stdev: {{ summary.stdev }}
+{% if baseline_median is not none %}
+- baseline median before this change: {{ baseline_median }}
+- delta vs. baseline: {{ (summary.median - baseline_median) | round(2) }}
+{% endif %}
+
+## What worked / what did not
+Two to four sentences grounded in the numbers above. Call out whether the
+distribution shifted (median vs. mean), whether variance grew or shrank, and
+whether the change aligned with the research hypothesis.
+
+## Suggested next experiment
+One sentence proposing the next hypothesis the research agent should consider.
+Be specific; avoid generic advice.
+
+## Plan that was implemented
+```
+{{ plan }}
+```
+
+## Strategy source after this experiment
+```python
+{{ strategy_source }}
+```
